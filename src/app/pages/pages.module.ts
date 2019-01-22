@@ -18,6 +18,9 @@ import { BusquedaConsultaComponent } from './consulta/busqueda-consulta/busqueda
 import {NgbCarousel, NgbCarouselModule, NgbPaginationModule} from '@ng-bootstrap/ng-bootstrap';
 import {NgxPaginationModule} from 'ngx-pagination';
 import { DetalleConsultaComponent } from './consulta/detalle-consulta/detalle-consulta.component';
+import { AddEditPiezaCatalogoComponent } from './catalogo/add-edit-pieza-catalogo/add-edit-pieza-catalogo.component';
+import { AlertDeletePiezaComponent } from './catalogo/alert-delete-pieza/alert-delete-pieza.component';
+import { WelcomeComponent } from './home/welcome/welcome.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +34,10 @@ import { DetalleConsultaComponent } from './consulta/detalle-consulta/detalle-co
     AdministracionComponent,
     ResultadoBusquedaComponent,
     BusquedaConsultaComponent,
-    DetalleConsultaComponent
+    DetalleConsultaComponent,
+    AddEditPiezaCatalogoComponent,
+    AlertDeletePiezaComponent,
+    WelcomeComponent,
   ],
   imports: [
     CommonModule,
@@ -42,6 +48,10 @@ import { DetalleConsultaComponent } from './consulta/detalle-consulta/detalle-co
     ComponentsModule,
     NgbCarouselModule,
     NgxPaginationModule
+  ],
+  entryComponents: [
+    AddEditPiezaCatalogoComponent,
+    AlertDeletePiezaComponent,
   ]
 })
 export class PagesModule { }

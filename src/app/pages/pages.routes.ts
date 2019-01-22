@@ -10,6 +10,7 @@ import {AdministracionComponent} from './administracion/administracion.component
 import {ResultadoBusquedaComponent} from './consulta/resultado-busqueda/resultado-busqueda.component';
 import {BusquedaConsultaComponent} from './consulta/busqueda-consulta/busqueda-consulta.component';
 import {DetalleConsultaComponent} from './consulta/detalle-consulta/detalle-consulta.component';
+import {WelcomeComponent} from './home/welcome/welcome.component';
 
 const pagesRoutes: Routes = [
   {
@@ -17,7 +18,7 @@ const pagesRoutes: Routes = [
     component: PagesComponent,
     children: [
       {
-        path: 'home',
+        path: 'inicio',
         component: HomeComponent,
         data: {title: 'Inicio'},
         children: [
@@ -30,32 +31,34 @@ const pagesRoutes: Routes = [
               {
                 path: 'busqueda', component: BusquedaConsultaComponent,
                 data: {
-                  title: 'Catálogo', subtitle: '/ Busqueda'
+                  title: 'Consulta', subtitle: '/ Busqueda'
                 }
               },
               {
                 path: 'resultado', component: ResultadoBusquedaComponent,
                 data: {
-                  title: 'Catálogo', subtitle: '/ Resultado busqueda'
+                  title: 'Consulta', subtitle: '/ Resultado busqueda'
                 }
               },
               {
                 path: 'detalle', component: DetalleConsultaComponent,
                 data: {
-                  title: 'Catálogo', subtitle: '/ Detalle pieza'
+                  title: 'Consulta', subtitle: '/ Detalle pieza'
                 }
               },
               {path: '', redirectTo: 'busqueda', pathMatch: 'full'}
             ]
           },
-          {path: 'catalogo', component: CatalogoComponent, data: {title: 'Consulta', subtitle: '/ Busqueda',}},
+          {path: 'catalogo', component: CatalogoComponent, data: {title: 'Catálogo', subtitle: '/ Busqueda',}},
           {path: 'prestamos', component: PrestamosComponent, data: {title: 'Prestamos', subtitle: ''}},
           {path: 'investigacion', component: InvestigacionComponent, data: {title: 'Investigación', subtitle: ''}},
           {path: 'restauracion', component: RestauracionComponent, data: {title: 'Restauración', subtitle: ''}},
           {path: 'administracion', component: AdministracionComponent, data: {title: 'Administración', subtitle: ''}},
+          {path: 'bienvenida', component: WelcomeComponent, data: {title: 'Inicio', subtitle: ''}},
+          {path: '', redirectTo: '/inicio/bienvenida', pathMatch: 'full'}
         ]
       },
-      {path: '', redirectTo: '/home', pathMatch: 'full'}
+      {path: '', redirectTo: '/inicio/bienvenida', pathMatch: 'full'}
     ]
   }
 ];

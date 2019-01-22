@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {
-  MatButtonModule, MatCardModule,
+  MatButtonModule, MatCardModule, MatDialogModule,
   MatIconModule,
   MatListModule,
   MatNavList, MatPaginatorModule,
   MatSidenavModule,
   MatTableModule,
-  MatToolbarModule
+  MatToolbarModule, MatTooltipModule
 } from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
@@ -24,6 +24,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     MatTableModule,
     MatPaginatorModule,
     MatCardModule,
+    MatTooltipModule,
+    MatDialogModule,
   ],
   exports: [
     BrowserAnimationsModule,
@@ -35,6 +37,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     MatTableModule,
     MatPaginatorModule,
     MatCardModule,
+    MatTooltipModule,
+    MatDialogModule,
   ]
 })
 export class MaterialModule { }

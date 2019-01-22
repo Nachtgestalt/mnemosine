@@ -1,5 +1,7 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
-import {MatPaginator, MatTableDataSource} from '@angular/material';
+import {MatDialog, MatPaginator, MatTableDataSource} from '@angular/material';
+import {AddEditPiezaCatalogoComponent} from './add-edit-pieza-catalogo/add-edit-pieza-catalogo.component';
+import {AlertDeletePiezaComponent} from './alert-delete-pieza/alert-delete-pieza.component';
 
 @Component({
   selector: 'app-catalogo',
@@ -9,14 +11,61 @@ import {MatPaginator, MatTableDataSource} from '@angular/material';
 export class CatalogoComponent implements OnInit {
 
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol', 'option'];
-  dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
+  dataSource: MatTableDataSource<PeriodicElement>;
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
-  constructor() {}
+  constructor(public dialog: MatDialog) {
+  }
 
   ngOnInit() {
+
+    this.loadData();
     this.dataSource.paginator = this.paginator;
+  }
+
+  loadData() {
+    this.dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
+  }
+
+  openModal(type, info) {
+    let dialogRef;
+    if (type === 'new') {
+      dialogRef = this.dialog.open(AddEditPiezaCatalogoComponent, {
+        data: {
+          type: 'new'
+        }
+      });
+    } else {
+      dialogRef = this.dialog.open(AddEditPiezaCatalogoComponent, {
+        data: {
+          type: 'edit',
+          info: info
+        }
+      });
+    }
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (result === 1) {
+        this.loadData();
+      }
+    });
+  }
+
+  deleteItem(info) {
+    const dialogRef = this.dialog.open(AlertDeletePiezaComponent, {
+      data: {
+        info: {
+          num_inventario: 12345
+        }
+      }
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (result === 1) {
+        this.loadData();
+      }
+    });
   }
 
 }
