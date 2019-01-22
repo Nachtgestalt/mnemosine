@@ -1,0 +1,191 @@
+<div class="container-fluid pb-3">
+  <div class="row m-3">
+    <h3>Información de la pieza</h3>
+  </div>
+
+  <div class="row m-0">
+    <div class="col-md-8">
+      <div class="row m-0" style="border: red 1px solid;">
+
+        <div class="row col-md-12 m-0" style="background: #455a64;">
+          <span>Datos de identificación</span>
+        </div>
+
+        <div class="row col-md-12 m-0 justify-content-center">
+
+          <div class="col-md-4 flex-column">
+            <p>No. Procedencia</p>
+            <p>XXXX</p>
+          </div>
+          <div class="col-md-4 flex-column">
+            <p>No. Inventario</p>
+            <p>XXXX</p>
+          </div>
+          <div class="col-md-4 flex-column">
+            <p>No. Catálogo</p>
+            <p>XXXX</p>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="row mx-0 mt-3" style="border: red 1px solid;">
+        <div class="row col-md-12 m-0" style="border-bottom: red 1px solid">
+          <span>Registro de origen</span>
+        </div>
+
+        <div class="row col-md-12 mx-0 flex-column align-items-start">
+          <p>Descripción de origen</p>
+          <p>Aquí va la descripción de origen</p>
+        </div>
+      </div>
+
+      <div class="row mx-0 mt-3" style="border: red 1px solid;">
+        <div class="row col-md-12 m-0" style="border-bottom: red 1px solid">
+          <span>Datos actualizados (Departamento de investigación)</span>
+        </div>
+
+        <div class="row col-md-12 m-0">
+
+          <div class="row col-md-12">
+            <div class="col-md-4 flex-column">
+              <p>Género</p>
+              <p>XXXX</p>
+            </div>
+            <div class="col-md-4 flex-column">
+              <p>Subgénero</p>
+              <p>XXXX</p>
+            </div>
+            <div class="col-md-4 flex-column">
+              <p>Tipo de objeto</p>
+              <p>XXXX</p>
+            </div>
+          </div>
+
+          <div class="row col-md-12">
+            <div class="col-md-4 flex-column">
+              <p>Tecnica</p>
+              <p>XXXX</p>
+            </div>
+            <div class="col-md-4 flex-column">
+              <p>Procedencia</p>
+              <p>XXXX</p>
+            </div>
+            <div class="col-md-4 flex-column">
+              <p>Epoca</p>
+              <p>XXXX</p>
+            </div>
+          </div>
+
+          <div class="row col-md-12">
+            <div class="col-md-4 flex-column">
+              <p>Titulo</p>
+              <p>XXXX</p>
+            </div>
+            <div class="col-md-4 flex-column">
+              <p>Autor</p>
+              <p>XXXX</p>
+            </div>
+            <div class="col-md-4 flex-column">
+              <p>Firmas o marcas</p>
+              <p>XXXX</p>
+            </div>
+          </div>
+
+          <div class="row col-md-12 flex-column">
+            <div class="col">
+              <p>Descripción de firmas o marcas</p>
+              <p>XXXX</p>
+            </div>
+          </div>
+
+          <div class="row col-md-12">
+            <div class="col-md-4 flex-column">
+              <p>Ubicación</p>
+              <p>XXXX</p>
+            </div>
+            <div class="col-md-4 flex-column">
+              <p>Fecha</p>
+              <p>XXXX</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="row mx-0 mt-3" style="border: red 1px solid;">
+        <div class="row col-md-12 m-0" style="border-bottom: red 1px solid">
+          <span>Comentarios sobre la pieza</span>
+        </div>
+
+        <div class="row col-md-12 mx-0 flex-column align-items-start">
+          <p>Descripción abreviada</p>
+          <p>Aquí va la descripción abreviada</p>
+        </div>
+
+        <div class="row col-md-12 mx-0 flex-column align-items-start">
+          <p>Descripción formal</p>
+          <p>Aquí va la descripción formal</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <ngb-carousel *ngIf="images">
+        <ng-template ngbSlide>
+          <img [src]="images[0]" alt="Random first slide">
+          <!--<div class="carousel-caption">-->
+          <!--<h3>First slide label</h3>-->
+          <!--<p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>-->
+          <!--</div>-->
+        </ng-template>
+        <ng-template ngbSlide>
+          <img [src]="images[1]" alt="Random second slide">
+          <!--<div class="carousel-caption">-->
+          <!--<h3></h3>-->
+          <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>-->
+          <!--</div>-->
+        </ng-template>
+      </ngb-carousel>
+
+      <div class="row mx-0 mt-3" style="border: red 1px solid;">
+        <div class="row col-md-12 m-0" style="border-bottom: red 1px solid">
+          <span>Medidas de la pieza</span>
+        </div>
+
+        <div class="row col-md-12 m-0">
+          <div class="row col-md-12">
+            <div class="col-md-3 flex-column">
+              <p>Alto</p>
+              <p>XXXX</p>
+            </div>
+            <div class="col-md-3 flex-column">
+              <p>Ancho</p>
+              <p>XXXX</p>
+            </div>
+            <div class="col-md-3 flex-column">
+              <p>Profundo</p>
+              <p>XXXX</p>
+            </div>
+            <div class="col-md-3 flex-column">
+              <p>Diametro</p>
+              <p>XXXX</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mx-0 mt-3" style="border: red 1px solid;">
+        <div class="row col-md-12 m-0" style="border-bottom: red 1px solid">
+          <span>Referencias de la pieza</span>
+        </div>
+        <div class="row col-md-12 mx-0 flex-column align-items-start">
+          <p>Publicaciones</p>
+          <p>Aquí van las publicaciones</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
