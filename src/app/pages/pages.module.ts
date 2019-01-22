@@ -21,6 +21,19 @@ import { DetalleConsultaComponent } from './consulta/detalle-consulta/detalle-co
 import { AddEditPiezaCatalogoComponent } from './catalogo/add-edit-pieza-catalogo/add-edit-pieza-catalogo.component';
 import { AlertDeletePiezaComponent } from './catalogo/alert-delete-pieza/alert-delete-pieza.component';
 import { WelcomeComponent } from './home/welcome/welcome.component';
+import { ReportesComponent } from './administracion/reportes/reportes.component';
+import { UsuariosComponent } from './administracion/usuarios/usuarios.component';
+import { HistoricosComponent } from './administracion/historicos/historicos.component';
+import { OaiComponent } from './administracion/oai/oai.component';
+import { VisorObjetosDigitalesComponent } from './administracion/visor-objetos-digitales/visor-objetos-digitales.component';
+import { PreservacionDigitalComponent } from './administracion/preservacion-digital/preservacion-digital.component';
+import { PersonasComponent } from './prestamos/personas/personas.component';
+import { OrganizacionesComponent } from './prestamos/organizaciones/organizaciones.component';
+import { ExposicionesComponent } from './prestamos/exposiciones/exposiciones.component';
+import { MovimientosComponent } from './prestamos/movimientos/movimientos.component';
+import { ResultadoBusquedaInvestigacionComponent } from './investigacion/resultado-busqueda-investigacion/resultado-busqueda-investigacion.component';
+import {BusquedaInvestigacionComponent} from './investigacion/busqueda-investigacion/busqueda-investigacion.component';
+import { EditInfoInvestigacionComponent } from './investigacion/edit-info-investigacion/edit-info-investigacion.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +51,19 @@ import { WelcomeComponent } from './home/welcome/welcome.component';
     AddEditPiezaCatalogoComponent,
     AlertDeletePiezaComponent,
     WelcomeComponent,
+    ReportesComponent,
+    UsuariosComponent,
+    HistoricosComponent,
+    OaiComponent,
+    VisorObjetosDigitalesComponent,
+    PreservacionDigitalComponent,
+    PersonasComponent,
+    OrganizacionesComponent,
+    ExposicionesComponent,
+    MovimientosComponent,
+    BusquedaInvestigacionComponent,
+    ResultadoBusquedaInvestigacionComponent,
+    EditInfoInvestigacionComponent,
   ],
   imports: [
     CommonModule,

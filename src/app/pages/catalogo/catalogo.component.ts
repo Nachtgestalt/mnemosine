@@ -28,7 +28,7 @@ export class CatalogoComponent implements OnInit {
     this.dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
   }
 
-  openModal(type, info) {
+  openModal(type, info?) {
     let dialogRef;
     if (type === 'new') {
       dialogRef = this.dialog.open(AddEditPiezaCatalogoComponent, {

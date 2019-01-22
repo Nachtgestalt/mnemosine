@@ -6,7 +6,7 @@ import {
   MatListModule,
   MatNavList, MatPaginatorModule,
   MatSidenavModule,
-  MatTableModule,
+  MatTableModule, MatTabsModule,
   MatToolbarModule, MatTooltipModule
 } from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -26,6 +26,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     MatCardModule,
     MatTooltipModule,
     MatDialogModule,
+    MatTabsModule,
   ],
   exports: [
     BrowserAnimationsModule,
@@ -39,6 +40,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     MatCardModule,
     MatTooltipModule,
     MatDialogModule,
+    MatTabsModule,
   ]
 })
 export class MaterialModule { }

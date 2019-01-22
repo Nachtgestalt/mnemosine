@@ -15,6 +15,8 @@ export class ResultadoBusquedaComponent implements OnInit {
 
   page = 4;
 
+  p: number = 1;
+
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
   constructor() { }
