@@ -13,34 +13,39 @@ export class AdministracionComponent implements OnInit {
   constructor(private router: Router) {
     this.routeLinks = [
       {
+        label: 'Conjuntos y colecciones',
+        link: 'conjuntos-colecciones',
+        index: 0
+      },
+      {
         label: 'Reportes',
         link: './reportes',
-        index: 0
+        index: 1
       },
       {
         label: 'Usuarios',
         link: './usuarios',
-        index: 1
+        index: 2
       },
       {
         label: 'Historicos',
         link: './historicos',
-        index: 0
+        index: 3
       },
       {
         label: 'OAI',
         link: './oai',
-        index: 1
+        index: 4
       },
       {
         label: 'Visor de objetos digitales',
         link: './visor',
-        index: 0
+        index: 5
       },
       {
         label: 'Preservación digital',
         link: './preservacion-digital',
-        index: 1
+        index: 6
       }
     ];
   }

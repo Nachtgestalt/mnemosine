@@ -5,6 +5,22 @@
     <!--<a routerLink="/inicio" class="go-home">-->
       <!--<h1 class="example-app-name">Mnemosine</h1>-->
     <!--</a>-->
+    <span class="example-spacer"></span>
+    <button mat-icon-button [matMenuTriggerFor]="menu"  class="menu-button">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item routerLink="/inicio/administracion">
+        <mat-icon>settings</mat-icon>
+        <span>Administración</span>
+      </button>
+
+      <button mat-menu-item routerLink="/login">
+        <mat-icon>exit_to_app</mat-icon>
+        <span>Cerrar sesión</span>
+      </button>
+    </mat-menu>
   </mat-toolbar>
 
   <mat-sidenav-container class="example-sidenav-container"
@@ -13,7 +29,6 @@
                  [fixedInViewport]="mobileQuery.matches" fixedTopGap="56" class="side_nav">
       <mat-nav-list>
         <a class="list-item" mat-list-item *ngFor="let nav of fillerNav" [routerLink]="nav.link" [routerLinkActive]="['active-list-item']">{{nav.viewValue}}</a>
-        <a class="list-item" mat-list-item routerLink="/login">Cerrar sesión</a>
       </mat-nav-list>
     </mat-sidenav>
 

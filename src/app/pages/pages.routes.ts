@@ -24,6 +24,9 @@ import {MovimientosComponent} from './prestamos/movimientos/movimientos.componen
 import {ResultadoBusquedaInvestigacionComponent} from './investigacion/resultado-busqueda-investigacion/resultado-busqueda-investigacion.component';
 import {BusquedaInvestigacionComponent} from './investigacion/busqueda-investigacion/busqueda-investigacion.component';
 import {EditInfoInvestigacionComponent} from './investigacion/edit-info-investigacion/edit-info-investigacion.component';
+import {ConjuntosColeccionesComponent} from './administracion/conjuntos-colecciones/conjuntos-colecciones.component';
+import {AdminConjuntosComponent} from './administracion/conjuntos-colecciones/admin-conjuntos/admin-conjuntos.component';
+import {AdminColeccionesComponent} from './administracion/conjuntos-colecciones/admin-colecciones/admin-colecciones.component';
 
 const pagesRoutes: Routes = [
   {
@@ -63,16 +66,18 @@ const pagesRoutes: Routes = [
             ]
           },
           {path: 'catalogo', component: CatalogoComponent, data: {title: 'Catálogo', subtitle: '/ Busqueda',}},
-          {path: 'prestamos', component: PrestamosComponent, data: {title: 'Prestamos', subtitle: ''},
+          {
+            path: 'prestamos', component: PrestamosComponent, data: {title: 'Prestamos', subtitle: ''},
             children: [
               {path: 'personas', component: PersonasComponent, data: {title: 'Prestamos', subtitle: '/ Personas'}},
               {path: 'organizaciones', component: OrganizacionesComponent, data: {title: 'Prestamos', subtitle: '/ Organizaciones'}},
               {path: 'exposiciones', component: ExposicionesComponent, data: {title: 'Prestamos', subtitle: '/ Exposiciones'}},
               {path: 'movimientos', component: MovimientosComponent, data: {title: 'Prestamos', subtitle: '/ Movimientos'}},
               {path: '**', redirectTo: 'personas', pathMatch: 'full'}
-              ]
+            ]
           },
-          {path: 'investigacion', component: InvestigacionComponent, data: {title: 'Investigación', subtitle: ''},
+          {
+            path: 'investigacion', component: InvestigacionComponent, data: {title: 'Investigación', subtitle: ''},
             children: [
               {
                 path: 'busqueda', component: BusquedaInvestigacionComponent,
@@ -99,6 +104,24 @@ const pagesRoutes: Routes = [
           {
             path: 'administracion', component: AdministracionComponent, data: {title: 'Administración', subtitle: ''},
             children: [
+              {
+                path: 'conjuntos-colecciones',
+                component: ConjuntosColeccionesComponent,
+                data: {title: 'Administración', subtitle: '/ Conjuntos y colecciones'},
+                children: [
+                  {
+                    path: 'admin-conjuntos',
+                    component: AdminConjuntosComponent,
+                    data: {title: 'Administración', subtitle: '/ Conjuntos y colecciones / Administrar conjuntos'}
+                  },
+                  {
+                    path: 'admin-colecciones',
+                    component: AdminColeccionesComponent,
+                    data: {title: 'Administración', subtitle: '/ Conjuntos y colecciones / Administrar colecciones'}
+                  },
+                  {path: '**', redirectTo: 'admin-conjuntos', pathMatch: 'full'}
+                ]
+              },
               {path: 'reportes', component: ReportesComponent, data: {title: 'Administración', subtitle: '/ Reportes'}},
               {path: 'usuarios', component: UsuariosComponent, data: {title: 'Administración', subtitle: '/ Usuarios'}},
               {path: 'historicos', component: HistoricosComponent, data: {title: 'Administración', subtitle: '/ Historicos'}},
@@ -112,7 +135,7 @@ const pagesRoutes: Routes = [
                 path: 'preservacion-digital', component: PreservacionDigitalComponent,
                 data: {title: 'Administración', subtitle: '/ Preservación digital'}
               },
-              {path: '**', redirectTo: 'reportes', pathMatch: 'full'}
+              {path: '**', redirectTo: 'conjuntos-colecciones', pathMatch: 'full'}
             ]
           },
           {path: 'bienvenida', component: WelcomeComponent, data: {title: 'Inicio', subtitle: ''}},
